@@ -6,7 +6,7 @@
 
 .game-board {
   width: 100%;
-  height: 500px;
+  height: 1000px;
   border: 15px solid rgb(35, 160, 35);
   margin: 0 auto;
   position: relative;
@@ -16,25 +16,49 @@
 
 .pipe {
   position: absolute;
-  bottom: 0;
-  width: 80px;
-  animation: pipe-animation 1.5s infinite linear;
+  bottom: 125px;
+  width: 160px;
+  animation: pipe-animation 2s linear infinite;
 }
 
 .mario {
-  width: 150px;
+  width: 300px;
   position: absolute;
-  bottom: 0;
+  bottom: 120px;
 }
 
 .jumpMario {
-  animation: jump 500ms ease-out;
+  animation: jump 600ms ease-out;
 }
 
 .clouds {
-  width: 550px;
+  width: 100%;
   position: absolute;
-  animation: clouds-animation 15s infinite linear;
+  animation: clouds-animation 7s infinite linear;
+}
+
+.over {
+  width: 1000px;
+  position: absolute;
+  bottom: 480px;
+  right: 50%;
+}
+
+.tryagain {
+  width: 800px;
+  position: absolute;
+  bottom: 340px;
+  right: 54%;
+}
+
+.cronometro {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  z-index: 100;
 }
 
 @keyframes pipe-animation {
@@ -49,29 +73,29 @@
 
 @keyframes jump {
   0% {
-    bottom: 0;
+    bottom: 100px;
   }
 
   40% {
-    bottom: 180px;
+    bottom: 400px;
   }
 
   50% {
-    bottom: 180px;
+    bottom: 400px;
   }
 
   60% {
-    bottom: 180px;
+    bottom: 400px;
   }
 
   100% {
-    bottom: 0;
+    bottom: 100px;
   }
 }
 
 @keyframes clouds-animation {
   from {
-    right: -550px;
+    right: 0px;
   }
   to {
     right: 100%;
