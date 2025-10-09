@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description"
-            content="Jogue o jogo do MARIO! Um clássico no mundo dos games.">
-        <meta name="keywords" content="Game, games, Mario, MariosBros">
-        <meta name="author" content="Matheus Fernando Ribeiro Martins">
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Game of Mario</title>
 
-        <meta property="og:title" content="Game of Mario">
-        <meta property="og:image" content="Imagem/foto_Matheus.JPG">
-        <meta property="og:url" content="URL DO SITE">
-        <meta property="og:type" content="website">
+  <!-- Fonte estilo retrô / mario -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="./styles.css">
-        <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="game-board">
+    <!-- camadas de fundo (usadas com background-position) -->
+    <div class="clouds" aria-hidden="true"></div>
+    <div class="piso" aria-hidden="true"></div>
 
-        <title>Game of Mario</title>
-    </head>
-    <body>
+    <!-- elementos do jogo -->
+    <img src="./Images/mario.gif" class="mario" alt="Mario" />
+    <img src="./Images/pipe.png" class="pipe" alt="Cano" />
 
-        <div class="game-board">
-            <img src="./Images/clouds.png" class="clouds">
-            <img src="./Images/mario.gif" class="mario">
-            <img src="./Images/pipe.png" class="pipe">
+    <!-- overlays (frase + play) -->
+    <img src="./Images/frase.png" class="frase hidden" alt="Frase Game Over" />
+    <img src="./Images/play.png" class="play" alt="Botão Play" />
 
-        </div>
-
-    </body>
+    <!-- placar (inserido via JS também, mantenho aqui para fallback) -->
+    <div class="score">SCORE: 0</div>
+  </div>
+</body>
 </html>
