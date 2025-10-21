@@ -86,7 +86,7 @@ body {
 }
 
 .frase {
-  top: 33%;
+  top: 30%;
 }
 
 .hidden { display: none; }
@@ -114,11 +114,47 @@ body {
   100% { bottom: 20vh; }
 }
 
+.Instrucao {
+  position: absolute;
+  bottom: 2vh;        /* distância de 2% da altura da tela */
+  left: 50%;         /* centraliza horizontalmente */
+  transform: translateX(-50%); /* corrige o alinhamento exato */
+  text-align: center;
+  color: #fff;
+  z-index: 1000;
+}
+
+/* Responsividade */
 /* Responsividade */
 @media (max-width: 900px) {
-  .game-board { height: 65vh; width: 96vw; }
-  .mario { width: 10vw;}
-  .pipe { width: 12vw; }
-  .play, .frase { width: 40vw; }
-  .score { font-size: 1.2rem; }
+  .game-board {
+    height: 65vh;
+    width: 96vw;
+  }
+
+  /* Mario maior no mobile */
+  .mario {
+    width: 20vw;     /* era 20vw, agora 40% maior */
+  }
+
+  .pipe {
+    width: 12vw;
+  }
+
+  .play, .frase {
+    width: 40vw;
+  }
+
+  .score {
+    font-size: 1.2rem;
+  }
+
+  @keyframes jump {
+    0%   { bottom: 20vh; }
+    40%  { bottom: 40vh; } /* um pouco menor em telas pequenas */
+    60%  { bottom: 40vh; }
+    100% { bottom: 20vh; }
+  }
+
 }
+
